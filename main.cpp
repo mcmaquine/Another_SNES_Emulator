@@ -11,9 +11,9 @@ using namespace std;
 
 int main( )
 {
-	P_register P();
+	P_register P;
 
-	//P = 0x53;
+	P = 2;
 
 	cout << P;
 
