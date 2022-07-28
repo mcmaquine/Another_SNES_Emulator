@@ -5,8 +5,17 @@
  *      Author: maquine
  */
 #include <iostream>
+#include "_65816.h"
+
+using namespace std;
+
 int main( )
 {
-	std::cout << "Hello 65816 Emulator!";
+	P_register P();
+
+	//P = 0x53;
+
+	cout << P;
+
 	return 0;
 }
