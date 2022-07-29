@@ -7,7 +7,7 @@
 #include <iostream>
 #include "_65816.h"
 
-P_register::P_register() : _c(0), _z(0), _i(0), _d(0), _b(0), _v(0), _n(0){}
+P_register::P_register() : _c(0), _v(0), _z(0), _i(0), _d(0), _b(0), _n(0){}
 
 P_register& P_register::operator =(int i)
 {
@@ -22,37 +22,37 @@ P_register& P_register::operator =(int i)
 	return *this;
 }
 
-unsigned int P_register::c()
+int P_register::c()
 {
 	return _c;
 }
 
-unsigned int P_register::z()
+int P_register::z()
 {
 	return _z;
 }
 
-unsigned int P_register::i()
+int P_register::i()
 {
 	return _i;
 }
 
-unsigned int P_register::d()
+int P_register::d()
 {
 	return _d;
 }
 
-unsigned int P_register::b()
+int P_register::b()
 {
 	return _b;
 }
 
-unsigned int P_register::v()
+int P_register::v()
 {
 	return _v;
 }
 
-unsigned int P_register::n()
+int P_register::n()
 {
 	return _n;
 }

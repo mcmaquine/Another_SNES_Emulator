@@ -44,7 +44,7 @@ all: Another_SNES_Emulator
 Another_SNES_Emulator: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/maquine/eclipse-workspace/Another_SNES_Emulator/src" -o "Another_SNES_Emulator" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "Another_SNES_Emulator" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
