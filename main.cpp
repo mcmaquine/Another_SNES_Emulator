@@ -13,7 +13,7 @@ int main( )
 {
 	P_register P;
 
-	P = 2;
+	P = 300;
 
 	cout << P;
 

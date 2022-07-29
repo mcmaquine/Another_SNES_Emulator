@@ -15,24 +15,24 @@ public:
 
 	int value();
 
-	unsigned char c();
-	unsigned char z();
-	unsigned char i();
-	unsigned char d();
-	unsigned char b();
-	unsigned char v();
-	unsigned char n();
+	unsigned c();
+	unsigned z();
+	unsigned i();
+	unsigned d();
+	unsigned b();
+	unsigned v();
+	unsigned n();
 
-	P_register& operator =( unsigned char _i);
+	P_register& operator =( int i);
 
 private:
-	unsigned _c; //Carry
-	unsigned _z; //Zero
-	unsigned _i; //IRQ Disable
-	unsigned _d; //Decimal mode
-	unsigned _b; //Break instruction
-	unsigned _v; //Overflow
-	unsigned _n; //Negative
+	unsigned int _c; //Carry
+	unsigned int _z; //Zero
+	unsigned int _i; //IRQ Disable
+	unsigned int _d; //Decimal mode
+	unsigned int _b; //Break instruction
+	unsigned int _v; //Overflow
+	unsigned int _n; //Negative
 };
 
 std::ostream& operator <<(std::ostream &o, P_register &p);

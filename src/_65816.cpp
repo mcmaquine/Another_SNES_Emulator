@@ -9,37 +9,53 @@
 
 P_register::P_register() : _c(0), _z(0), _i(0), _d(0), _b(0), _v(0), _n(0){}
 
-P_register& P_register::operator =(unsigned char _i)
+P_register& P_register::operator =(int i)
 {
-	_c = 0x01 & _i;
-	_z = 0x02 & _i;
-	_i = 0x04 & _i;
-	_d = 0x08 & _i;
-	_b = 0x10 & _i;
-	_v = 0x40 & _i;
-	_n = 0x80 & _i;
+	_c = ( 0x01 & i ) >> 0; //doesn't shift
+	_z = ( 0x02 & i ) >> 1;
+	_i = ( 0x04 & i ) >> 2;
+	_d = ( 0x08 & i ) >> 3;
+	_b = ( 0x10 & i ) >> 4;
+	_v = ( 0x40 & i ) >> 6;
+	_n = ( 0x80 & i ) >> 7;
 
 	return *this;
 }
 
-unsigned char P_register::c()
+unsigned int P_register::c()
 {
 	return _c;
 }
 
-unsigned char P_register::z()
+unsigned int P_register::z()
 {
 	return _z;
 }
 
-unsigned char P_register::i()
+unsigned int P_register::i()
 {
-	return _i
+	return _i;
 }
-	unsigned char P_register::d()
-	unsigned char P_register::b()
-	unsigned char P_register::v()
-	unsigned char P_register::n()
+
+unsigned int P_register::d()
+{
+	return _d;
+}
+
+unsigned int P_register::b()
+{
+	return _b;
+}
+
+unsigned int P_register::v()
+{
+	return _v;
+}
+
+unsigned int P_register::n()
+{
+	return _n;
+}
 
 int P_register::value()
 {
